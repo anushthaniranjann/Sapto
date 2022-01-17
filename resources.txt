@@ -1,0 +1,10 @@
+========SOURCE = https://www.verywellfit.com/what-is-bmr-or-basal-metabolic-rate-3495380=============
+Equation to Calculate Your BMR
+The Harris-Benedict Equation is often used to estimate basal metabolic rate.
+
+Men: BMR = 88.362 + (13.397 x weight in kg) + (4.799 x height in cm) - (5.677 x age in years)
+Women: BMR = 447.593 + (9.247 x weight in kg) + (3.098 x height in cm) - (4.330 x age in years)
+=====================================================================================================
+<span><img class="s2" src="/undraw_healthy_lifestyle_6tyl.svg"></span>
+======================================================================================================
+

@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs")%>
+<div id="info" class="container">
+<h1> Hi <span id="user"><%= currentUser.username %></span> ! </h1>
+<div id="data">
+	<h3 class="det"> Help us letting plan your diet by filling the given form </h3>
+
+		<div class="row">
+			<div style="width: 100%; margin: 25px 0;padding-left:15px;">
+				<form action="/yourInfo/<%=currentUser._id%>" method="POST">
+					<div class="form-group">
+					<label for="age">Age:</label>
+					<input id="age" class="form-control" type = "number" name="age" placeholder = "How long you been on earth?">
+					</div>
+
+					<div class="form-group">
+					<label for="gender">Gender:</label>
+					<input id="gender" class="form-control" type = "text" name="gender" placeholder = "M or F?">
+					</div>
+
+					<div class="form-group">
+					<label for="weight">Weight in kg:</label>
+					<input id="weight" class="form-control" name="weight" type = "number" placeholder = "Weight?(kg)">	
+					</div>
+
+					<div class="form-group">
+					<label for="height">Height in m:</label>
+					<input id="height" class="form-control" type = "number" name="height" placeholder = "How high you go?(m)" step="0.01" min="0" max="10">
+					</div>
+
+					<div class="form-group">
+					<label for="numberM">How many meals in a Day?</label>
+					<input id="numberM" class="form-control" type = "number" name="numberM" placeholder = "No of meals" step="1" min="0" max="6">
+					</div>
+					
+
+					<div form-group">
+					<button id="big" style="width:70%" class="btn btn-md btn-info btn-block">Submit!</button>
+					</div>
+				</form>
+				<a href="/">Go Back!</a>
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+
+
+
+<%- include("partials/footer.ejs")%>
+
+
+
+
+

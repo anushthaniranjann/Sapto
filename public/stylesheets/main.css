@@ -1,0 +1,177 @@
+	html{
+		height: 100%;
+		width: 100%;
+	}
+	body{
+			background-color: #3b464a;
+			font-family: 'Montserrat', sans-serif;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			min-height: 100%;
+			width: 100%;
+			
+		}
+	/*.container{
+			
+			margin: auto;
+		/*	margin-left: 20px;*/
+		
+	
+	h3{
+			color: #ffffff;
+
+		}
+		.navbar-dark .navbar-brand{
+			color: #2cfc03;
+
+		}
+		.navbar-dark .navbar-brand:hover{
+			color: #02f7be;
+		}
+		.s1{
+			width: 40%;
+			float: right;
+			opacity: .8;
+			z-index: 0;
+
+			padding-left: 10px; 
+		}
+		p{
+			color: #dce8e5;
+		}
+		label{
+			color: #00ff84;
+		}
+		form{
+			z-index: 1;
+			
+
+		}
+		#navbarTogglerDemo02{
+			color: #a5fc03;
+		}
+		.navbar-dark .navbar-toggler{
+			border-color: rgba(30, 214, 87, 0.45);
+		}
+		.footer{
+			/*width: 100%;*/
+			background-color: black;
+			color: #c9c9c9;
+			margin-top: auto;
+			
+		}
+		#insta{
+			color: #c9c9c9;
+			display: inline-block;
+
+
+		
+			
+
+		}
+		#insta:hover{
+			color: #02f7be;
+		}
+		ul#horizontal-list li{
+			width: auto;
+			list-style: none;
+			
+			/*text-align: center;*/
+			
+		}
+		ul#horizontal-list{
+			padding-inline-start: 0px;
+
+		}
+		.table{
+			
+			margin:0 auto;
+			color: #919ba6;
+			margin-left: 20px;
+			padding-top:5px;
+			width: auto;
+			
+		}
+
+		h5 {
+			margin-left: 20px;
+			margin-top: 10px;
+		}
+		.btn .btn-success{
+			margin-top: 10px;
+		}
+		.btn-success{
+			margin-top: 10px;
+		}
+		.form-control{
+			width:70%;
+			margin-right: 0;
+			z-index: 2;
+		}
+
+
+		#SignupForm{
+			color: #e0f2d8;
+		}
+/*		.SignIN{
+			margin-left: 30px;
+			padding-left: 10px;
+			border-left: 2px solid rgba(158, 186, 145, 0.6);
+		}*/
+		#login{
+			margin-top: 20px;
+			margin-left: 30%;
+			border-left: 2px solid rgba(158, 186, 145, 0.6);
+
+		}
+
+		h1{
+			color: #e0f2d8;
+		}
+		#info{
+			
+			padding-top: 10px;
+
+		}	
+		#user {
+			color: #02f7be;
+		}
+		.det{
+			color:#f0f5f1;
+			width: 55%;
+		}
+		.s2{
+			width: 40%;
+			float: right;
+			opacity: .8;
+			z-index: 0;
+		}
+		#big{
+			width:80%;
+		}
+		.method{
+			display: none;
+		}
+		.rem{
+			display: none;
+			
+		}
+		.dp{
+			width:30%;
+			padding-top:10px;
+			transition: all 0.3s;
+		}
+		.dp:hover{
+			width: 35%;
+		}
+		#Hbrand{
+			color: #2cfc03;
+		}
+		#Hbrand:hover{
+			font-size:2rem;
+			transition: all 0.2s;
+		}
+		.col-md-4 .col-sm-12{
+			padding-bottom: 100px;
+		}

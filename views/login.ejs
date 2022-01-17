@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs")%>
+
+<div id="login" style="padding-left:15px;margin-left:10%">
+<h1 id="SignupForm">Login</h1>
+
+<form action="/login" method="POST">
+<div class="form-group">
+	<label for="username">Name:</label>
+	<input class="form-control" type="text" name="username" placeholder="username">
+	<label for="password">Password:</label>
+	<input class="form-control" type="password" name="password" placeholder="it's still a secret">
+	<button  class="btn btn-success">Login</button>
+	
+
+</div>
+</form>
+
+<a style="color:#e0f2d8;"href="/register">New here? Sign Up!</a>
+</div>
+
+<span><img style="width:31%;float:right" src="/undraw_welcome_3gvl.svg"></span>
+<%- include("partials/footer.ejs")%>
