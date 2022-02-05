@@ -42,13 +42,15 @@ margin-bottom:20px;font-size: 1rem;"><i style="color:#e0f2d8">“Your diet is a 
                             <img class="dp" src="/Mental_health-removebg-preview.png">
                             <div class="caption">
 
-                                <h4 style="color:#e0f2d8;">Macros planner, Excercise Assistant , Mental health assistant</h4>
+                                <h4 style="color:#e0f2d8;">Macros planner &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Diabetes Prediction &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbspStress Prediction</h4>
 
 
                             </div>
                             <p>
                                 <% if(!currentUser){%>
-                                    <a style="background:none" href="/yourInfo" class="btn btn-info">Get diet plan</a>
+                                    <a style="background:none; margin:80px;" href="/yourInfo" class="btn btn-info">Get Diet plan</a>
+                                    <a style="background:none; margin:75px" href=https://diabetss.herokuapp.com/ target="_blank" class="btn btn-info">Diabetes Predictor</a>
+                                    <a style="background:none; margin:80px" href=https://depres.herokuapp.com/ target="_blank" class="btn btn-info">Stress Predictor</a>
                                     <%}else{%>
                                         <%if(currentUser.age){%>
                                             <a style="background:none" href="/yourInfo/<%=currentUser._id%>" class="btn btn-info">Get diet plan</a>
