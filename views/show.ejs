@@ -1,94 +1,139 @@
 <%- include("partials/header.ejs")%>
 
-<div  class="container">
-<h1>Hi <span id="user"><%= currentUser.username %></span>!</h1>
-<h3 style="color: #e0f2d8">Your plan was of type: <span style="color:#52fc03"><%= currentUser.plan %></span>
-<div style="padding-left:0;padding-top:10px;padding-bottom:10px" class="container">
-<a href=/yourInfo/<%=currentUser._id%>><button style="background:none" class="btn btn-info">Change Plan</button></a>
-<a href=/yourInfo><button style="background:none" class="btn btn-info">Update Details</button></a>
-</div>
-<div class="table-responsive">
-<table style="margin-left:0;margin-top:15px;" class="table table-sm ">
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">P(gm)</th>
-      <th scope="col">C(gm)</th>
-      <th scope="col">F(gm)</th>
-    </tr>
-  </thead>
-  <tbody>
- 
-    <% if(diet.p1){%>
+    <div class="container">
+        <h1 style="color:#060606">Hi <span id="user"><%= currentUser.username %></span>!</h1>
+        <h3 style="color:#060606">Your plan was of type: <span style="color:#060606;"><%= currentUser.plan %></span>
+            <div style="padding-left:0;padding-top:10px;padding-bottom:10px" class="container">
+                <a href=/yourInfo/<%=currentUser._id%>><button style="background:none; color:#060606;" class="btn btn-info">Change Plan</button></a>
+                <a href=/yourInfo><button style="background:none; color:#060606" class="btn btn-info">Update Details</button></a>
+            </div>
+            <div class="table-responsive">
+                <table style="margin-left:0;margin-top:15px;" class="table table-sm ">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">P(gm)</th>
+                            <th scope="col">C(gm)</th>
+                            <th scope="col">F(gm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-    <tr>
-      <th scope="row">1</th>
-      <td style="display:none;" id="ti1"><%=currentUser.t1%></td>
-      <td id="pr1"><%=diet.p1%></td>
-      <td id="cr1"><%=diet.c1%></td>
-      <td id="fa1"><%=diet.f1%></td>
-    </tr>
- 	<%}%>
-    <% if(diet.p2){%>
+                        <% if(diet.p1){%>
 
-        <tr>
-      <th scope="row">2</th>
-      <td style="display:none;" id="ti2"><%=currentUser.t2%></td>
-      <td id="pr2"><%=diet.p2%></td>
-      <td id="cr2"><%=diet.c2%></td>
-      <td id="fa2"><%=diet.f2%></td>
-    </tr>
- 	<%}%>
-    <% if(diet.p3){%>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td style="display:none;" id="ti1">
+                                    <%=currentUser.t1%>
+                                </td>
+                                <td id="pr1">
+                                    <%=diet.p1%>
+                                </td>
+                                <td id="cr1">
+                                    <%=diet.c1%>
+                                </td>
+                                <td id="fa1">
+                                    <%=diet.f1%>
+                                </td>
+                            </tr>
+                            <%}%>
+                                <% if(diet.p2){%>
 
-        <tr>
-      <th scope="row">3</th>
-      <td style="display:none;" id="ti3"><%=currentUser.t3%></td>
-      <td id="pr3"><%=diet.p3%></td>
-      <td id="cr3"><%=diet.c3%></td>
-      <td id="fa3"><%=diet.f3%></td>
-    </tr>
-  	<%}%>
-    <% if(diet.p4){%>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td style="display:none;" id="ti2">
+                                            <%=currentUser.t2%>
+                                        </td>
+                                        <td id="pr2">
+                                            <%=diet.p2%>
+                                        </td>
+                                        <td id="cr2">
+                                            <%=diet.c2%>
+                                        </td>
+                                        <td id="fa2">
+                                            <%=diet.f2%>
+                                        </td>
+                                    </tr>
+                                    <%}%>
+                                        <% if(diet.p3){%>
 
-       <tr>
-      <th scope="row">4</th>
-      <td style="display:none;" id="ti4"><%=currentUser.t4%></td>
-      <td id="pr4"><%=diet.p4%></td>
-      <td id="cr4"><%=diet.c4%></td>
-      <td id="fa4"><%=diet.f4%></td>
-    </tr>
- 	<%}%>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td style="display:none;" id="ti3">
+                                                    <%=currentUser.t3%>
+                                                </td>
+                                                <td id="pr3">
+                                                    <%=diet.p3%>
+                                                </td>
+                                                <td id="cr3">
+                                                    <%=diet.c3%>
+                                                </td>
+                                                <td id="fa3">
+                                                    <%=diet.f3%>
+                                                </td>
+                                            </tr>
+                                            <%}%>
+                                                <% if(diet.p4){%>
 
-    <% if(diet.p5){%>
-        <tr>
-      <th scope="row">5</th>
-      <td style="display:none;" id="ti5"><%=currentUser.t5%></td>
-      <td id="pr5"><%=diet.p5%></td>
-      <td id="cr5"><%=diet.c5%></td>
-      <td id="fa5"><%=diet.f5%></td>
-    </tr>
- 	<%}%>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td style="display:none;" id="ti4">
+                                                            <%=currentUser.t4%>
+                                                        </td>
+                                                        <td id="pr4">
+                                                            <%=diet.p4%>
+                                                        </td>
+                                                        <td id="cr4">
+                                                            <%=diet.c4%>
+                                                        </td>
+                                                        <td id="fa4">
+                                                            <%=diet.f4%>
+                                                        </td>
+                                                    </tr>
+                                                    <%}%>
+
+                                                        <% if(diet.p5){%>
+                                                            <tr>
+                                                                <th scope="row">5</th>
+                                                                <td style="display:none;" id="ti5">
+                                                                    <%=currentUser.t5%>
+                                                                </td>
+                                                                <td id="pr5">
+                                                                    <%=diet.p5%>
+                                                                </td>
+                                                                <td id="cr5">
+                                                                    <%=diet.c5%>
+                                                                </td>
+                                                                <td id="fa5">
+                                                                    <%=diet.f5%>
+                                                                </td>
+                                                            </tr>
+                                                            <%}%>
 
 
-    <% if(diet.p6){%>
-        <tr>
-      <th scope="row">6</th>
-      <td style="display:none;" id="ti6"><%=currentUser.t6%></td>
-      <td id="pr6"><%=diet.p6%></td>
-      <td id="cr6"><%=diet.c6%></td>
-      <td id="fa6"><%=diet.f6%></td>
-    </tr>
- 	<%}%>
-  </tbody>
-</table>
-<button id="calendar" class="btn btn-info">Add to Calendar</button>
+                                                                <% if(diet.p6){%>
+                                                                    <tr>
+                                                                        <th scope="row">6</th>
+                                                                        <td style="display:none;" id="ti6">
+                                                                            <%=currentUser.t6%>
+                                                                        </td>
+                                                                        <td id="pr6">
+                                                                            <%=diet.p6%>
+                                                                        </td>
+                                                                        <td id="cr6">
+                                                                            <%=diet.c6%>
+                                                                        </td>
+                                                                        <td id="fa6">
+                                                                            <%=diet.f6%>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <%}%>
+                    </tbody>
+                </table>
+                <button id="calendar" class="btn btn-info">Add to Calendar</button>
 
-<img style="width: 40%;float: right;" src="/undraw_information_tab_ocka.svg">
-</div>
-</div>
+                <img style="width: 40%;float: right;" src="/undraw_information_tab_ocka.svg">
+            </div>
+    </div>
 
-<%- include("partials/footer.ejs")%>
-
-
-
+    <%- include("partials/footer.ejs")%>

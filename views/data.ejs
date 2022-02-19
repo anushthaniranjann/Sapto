@@ -1,13 +1,13 @@
 <%- include("partials/header.ejs")%>
     <div class="container">
         <div>
-            <h2 style="color:#e0f2d8">Your BMI is : <span style="color:#15d1c5"><%= Math.round(((userD.weight/(userD.height*userD.height)) + Number.EPSILON) *10)/10; %></span></h2>
-            <h2 style="color:#e0f2d8">Your Basal Metabolic Rate (BMR) is : <span id="bmr" style="color:#15d1c5"><%if(userD.gender[0].toUpperCase() == "M"){%>
+            <h3 style="color:#060606;padding-top: 20px;">Your BMI is : <span style="color:#121d13"><%= Math.round(((userD.weight/(userD.height*userD.height)) + Number.EPSILON) *10)/10; %></span></h3>
+            <h3 style="color:#060606">Your Basal Metabolic Rate (BMR) is : <span id="bmr" style="color:#121d13"><%if(userD.gender[0].toUpperCase() == "M"){%>
 		<%=Math.round((88.362 + (13.397 * userD.weight) + (4.799 * userD.height*100) - (5.677 * userD.age) + Number.EPSILON)*10)/10 ;%>
 	<%}else if (userD.gender[0].toUpperCase() == "F"){%>
 		<%=Math.round((447.593 + (9.247 * userD.weight) + (3.098 * userD.height) - (4.330 * userD.age) + Number.EPSILON)*10)/10 ;%>
-	<%}%></span></h2>
-            <h3 style="color:#e0f2d8" id="comment">
+	<%}%></span></h3>
+            <h4 style="color:#045c2b" id="comment">
                 <%if(Math.round(((userD.weight/((userD.height)*(userD.height))) + Number.EPSILON) *10)/10 <=24.9 && Math.round(((userD.weight/((userD.height)*(userD.height))) + Number.EPSILON) *10) / 10 >=18.5){%>
                     Great! your BMI is ideal
                     <%}else if (Math.round(((userD.weight/((userD.height)*(userD.height))) + Number.EPSILON) *10)/10 <18.5){%>
@@ -17,14 +17,12 @@
                             <%}else if (Math.round(((userD.weight/((userD.height)*(userD.height))) + Number.EPSILON) *10) / 10 >=30){%>
                                 It's a bit long journey for you Hold Tight!
                                 <%}%>
-            </h3>
+            </h4>
             <div id="plans">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="/yourInfo"><button class="btn btn-info">UPDATE</button></a>
-                        <h3 style="padding-top:15px">Choose any one plan:</h3>
-
-
+                        <a href="/yourInfo" style="color:#060606;"><button class="btn btn-info">UPDATE</button></a>
+                        <h3 style="padding-top:15px; color:#060606;"><strong>Choose any one plan:</strong></h3>
                     </div>
 
                     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
@@ -32,30 +30,30 @@
                             <div class="thumbnail">
                                 <img class="dp" src="/cut1.svg">
                                 <div class="caption">
-                                    <h4 style="color:#e0f2d8;">CUT</h4>
+                                    <h4 style="color:#060606;">CUT</h4>
                                 </div>
                                 <p>
-                                    <button style="background:none" id="cut" class="btn btn-info">Get diet plan</button>
+                                    <button style="background:none; color: #060606;" id="cut" class="btn btn-info">Get diet plan</button>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-12">
                             <div class="thumbnail">
                                 <img class="dp" src="/m1.svg">
                                 <div class="caption">
-                                    <h4 style="color:#e0f2d8;">MAINTAIN</h4>
+                                    <h4 style="color:#060606;">MAINTAIN</h4>
                                 </div>
                                 <p>
-                                    <button style="background:none" id="maintain" class="btn btn-info">Get diet plan</button>
+                                    <button style="background:none; color:#060606;" id="maintain" class="btn btn-info">Get diet plan</button>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-12">
                             <div class="thumbnail">
                                 <img class="dp" src="/b1.svg">
                                 <div class="caption">
-                                    <h4 style="color:#e0f2d8;">BULK</h4>
+                                    <h4 style="color:#060606;">BULK</h4>
                                 </div>
                                 <p>
-                                    <button style="background:none" id="bulk" class="btn btn-info">Get diet plan</button>
+                                    <button style="background:none; color:#060606;" id="bulk" class="btn btn-info">Get diet plan</button>
                             </div>
                         </div>
                     </div>
@@ -65,9 +63,9 @@
 
 
         <div class="method" id="chart">
-            <h3 style="color:#e0f2d8">Full day calorie target: <span style="color:#2be034" id="cal"></span></h3>
+            <h3 style="color:#05220c">Full day calorie target: <span style="color:#121d13" id="cal"></span></h3>
 
-            <h4 style="color:white">No of meals: <span id="nM"><%=userD.noMeals%></span>
+            <h4 style="color:#05220c;padding-bottom:20px;">No of meals: <span id="nM"><%=userD.noMeals%></span>
                 <form action="/yourInfo/<%=currentUser._id%>/profile" method="POST">
                     <textarea style="display:none" name="plan" id="plan"></textarea>
                     <% for(var i = 0;i < userD.noMeals;i ++){%>
@@ -75,29 +73,29 @@
                             <%=i%>
                         </p>
                         <div class="container">
-                            <div class="row" style="border: solid 1px #52663a">
-                                <div class="form-group col-md-3 col-sm-3">
+                            <div class="row" style="border: solid 1px #52663a; ">
+                                <div class="form-group2 col-md-3 col-sm-3">
                                     <input style="display:none" type="datetime-local" id="gDate<%=i%>" name="gDate<%=i%>">
-                                    <label for="meal<%=i%>">meal<%=i+1%></label>
-                                    <input id="time<%=i%>" style="background:#2d3830;color:white" type="time" name="meal<%=i%>" class="form-control">
+                                    <label for="meal<%=i%>">Meal<%=i+1%></label>
+                                    <input id="time<%=i%>" style="background:#97c4a4;color:#060606;" type="time" name="meal<%=i%>" class="form-control">
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label style="color:#bdeb34" for="prot<%=i%>">protein(gm)</label>
-                                    <input id="prot<%=i%>" style="background:#2d3830;color:white" type="number" name="prot<%=i%>" class="form-control p" step="0.01" min="0" max="100">
+                                <div class="form-group2 col-md-3">
+                                    <label style="color:#121d13;" for="prot<%=i%>">Protein(gm)</label>
+                                    <input id="prot<%=i%>" style="background:#97c4a4;color:#060606;" type="number" name="prot<%=i%>" class="form-control p" step="0.01" min="0" max="100">
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label style="color:#bdeb34" for="carbs<%=i%>">Carbs(gm)</label>
-                                    <input id="carbs<%=i%>" style="background:#2d3830;color:white" type="number" name="carbs<%=i%>" class="form-control c" step="0.01" min="0" max="100">
+                                <div class="form-group2 col-md-3">
+                                    <label style="color:#121d13" for="carbs<%=i%>">Carbs(gm)</label>
+                                    <input id="carbs<%=i%>" style="background:#97c4a4;color:#060606;" type="number" name="carbs<%=i%>" class="form-control c" step="0.01" min="0" max="100">
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label style="color:#bdeb34" for="fat<%=i%>">Fats(gm)</label>
-                                    <input id="fat<%=i%>" style="background:#2d3830;color:white" type="number" name="fat<%=i%>" class="form-control f" step="0.01" min="0" max="100">
+                                <div class="form-group2 col-md-3">
+                                    <label style="color:#121d13" for="fat<%=i%>">Fats(gm)</label>
+                                    <input id="fat<%=i%>" style="background:#97c4a4;color:#060606;" type="number" name="fat<%=i%>" class="form-control f" step="0.01" min="0" max="100">
                                 </div>
                             </div>
                         </div>
                         <%}%>
                             <div class="container">
-                                <button style="background:#00c736" class="btn btn-md btn-info btn-block">Save</button>
+                                <button style="background:#060606;" class="btn btn-md btn-info btn-block">Save</button>
                             </div>
                 </form>
         </div>
