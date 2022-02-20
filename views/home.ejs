@@ -25,16 +25,12 @@
         <h4 style="color:#efefef;padding-top:20px;font-size: 2.25rem; ">Start your <span id="Hbrand ">Sapto</span> journey today and allow us to help <img style="width:30%;float: right;padding-left:20px;padding-top:15px " src="/undraw_different_love_a3rg.svg "> you reach your fitness goal Faster!</h4>
         <h4 style="color:#060606;padding-top:140px;font-size:1.50rem; ">Start your <span id="Hbrand ">Sapto</span> journey today and allow us to help you reach your fitness goal Faster!</h4>
     </div>
-    <!-- <div class="container4 ">
-        <h4 style="width:40%;margin-left:30%;margin-top:20px; margin-bottom:20px;font-size: 1rem; "><i style="color:#060606 ">“Your diet is a bank account." </i><i style="color:#e0f2d8 ">Good food choices are good investments.” – Bethenny Frankel</i></h4>
-        <h4 style="width:40%;margin-left:30%;margin-top:20px; margin-bottom:20px;font-size: 1rem; "><i style="color:#060606 ">“Your diet is a bank account." </i><i style="color:#e0f2d8 ">Good food choices are good investments.” – Bethenny Frankel</i></h4>
-    </div> -->
 
     <div class="container ">
 
         <div class="row ">
             <div class="col-lg-12 ">
-                <h2 style="padding-top:20px;font-size: 1.55rem; color: #060606 "><strong>Our Services:</strong></h2>
+                <h2 style="padding-top:20px;font-size: 2.05rem; color: #060606 "><strong>Our Services:</strong></h2>
                 <div class="row text-center " style="display:block; flex-wrap: wrap; ">
                     <div class="col-md-12 col-sm-12 ">
                         <div class="thumbnail ">
@@ -43,17 +39,19 @@
                             <img class="dp " src="/Exercise-removebg-preview.png ">
                             <!-- <h4>Hii</h4> -->
                             <img class="dp " src="/Mental_health-removebg-preview.png ">
-                            <div class="caption ">
+                            <img class="dp " src="/disease.png ">
+                            <!-- <div class="caption "> -->
 
-                                <h4 style="color:#060606; ">Macros planner &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Diabetes Prediction &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbspStress Prediction</h4>
+                            <!-- <h4 style="color:#060606; ">Macros planner &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Diabetes Prediction &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbspStress Prediction $nbsp Disease Predictor </h4> -->
 
 
-                            </div>
+                            <!-- </div> -->
                             <p>
                                 <% if(!currentUser){%>
-                                    <a style="background:none; margin:80px;color: #060606; " href="/yourInfo " class="btn btn-info ">Get Diet plan</a>
-                                    <a style="background:none; margin:75px;color: #060606 " href=https://diabetss.herokuapp.com/ target="_blank " class="btn btn-info ">Diabetes Predictor</a>
-                                    <a style="background:none; margin:80px;color: #060606 " href=https://depres.herokuapp.com/ target="_blank " class="btn btn-info ">Stress Predictor</a>
+                                    <a style="background:none; margin:30px;color: #060606; " href="/yourInfo " class="btn btn-info ">Get Diet plan</a>
+                                    <a style="background:none; margin:35px;color: #060606 " href=https://diabetss.herokuapp.com/ target="_blank " class="btn btn-info ">Diabetes Predictor</a>
+                                    <a style="background:none; margin:35px;color: #060606 " href=https://depres.herokuapp.com/ target="_blank " class="btn btn-info ">Stress Predictor</a>
+                                    <a style="background:none; margin:30px;color: #060606 " href=https://diseasetest.herokuapp.com/ target="_blank " class="btn btn-info ">Disease Predictor</a>
                                     <%}else{%>
 
                                         <%if(currentUser.age){%>
@@ -61,11 +59,13 @@
                                             <a style="background:none; margin:75px;color: #060606 " href="/yourInfo/<%=currentUser._id%>" class="btn btn-info">Get diet plan</a>
                                             <a style="background:none; margin:75px;color: #060606 " href=https://diabetss.herokuapp.com/ target="_blank " class="btn btn-info ">Diabetes Predictor</a>
                                             <a style="background:none; margin:80px;color: #060606 " href=https://depres.herokuapp.com/ target="_blank " class="btn btn-info ">Stress Predictor</a>
+                                            <a style="background:none; margin:80px;color: #060606 " href=https://diseasetest.herokuapp.com/ target="_blank " class="btn btn-info ">Disease Predictor</a>
 
                                             <%}else{%>
                                                 <a style="background:none; margin:75px;color: #060606" href="/yourInfo" class="btn btn-info">Get diet plan</a>
                                                 <a style="background:none; margin:75px;color: #060606 " href=https://diabetss.herokuapp.com/ target="_blank " class="btn btn-info ">Diabetes Predictor</a>
                                                 <a style="background:none; margin:80px;color: #060606 " href=https://depres.herokuapp.com/ target="_blank " class="btn btn-info ">Stress Predictor</a>
+                                                <a style="background:none; margin:80px;color: #060606 " href=https://diseasetest.herokuapp.com/ target="_blank " class="btn btn-info ">Disease Predictor</a>
                                                 <%}%>
                                                     <%}%>
                         </div>
